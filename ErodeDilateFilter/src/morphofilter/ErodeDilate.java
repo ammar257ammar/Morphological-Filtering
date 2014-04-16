@@ -45,7 +45,7 @@ public class ErodeDilate {
         int height = image.length;
         int width = image[0].length;
 
-        int[][] ouput = new int[height][width];
+        int[][] output = new int[height][width];
         int pixel = 0;
 
         for (int j = half_h; j < height - half_h; j++) {
@@ -62,11 +62,11 @@ public class ErodeDilate {
                         }
                     }
                 }
-                ouput[j][i] = pixel;
+                output[j][i] = pixel;
             }
         }
 
-        return ouput;
+        return output;
     }
     /*-------------------------------------------------------------------------*/
 }
