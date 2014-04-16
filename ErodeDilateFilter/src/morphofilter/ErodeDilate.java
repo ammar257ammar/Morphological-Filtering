@@ -4,15 +4,15 @@ package morphofilter;
 public class ErodeDilate {
 
     /*-------------------------------------------------------------------------*/
-    public int[][] erode(int[][] inImage, float[][] kernel) {
+    public int[][] erode(int[][] image, float[][] structure) {
 
-        int half_h = kernel.length / 2;
-        int half_w = kernel[0].length / 2;
+        int half_h = structure.length / 2;
+        int half_w = structure[0].length / 2;
 
-        int height = inImage.length;
-        int width = inImage[0].length;
+        int height = image.length;
+        int width = image[0].length;
 
-        int[][] outImage = new int[height][width];
+        int[][] output = new int[height][width];
         int pixel = 0;
 
         for (int j = half_h; j < height - half_h; j++) {
@@ -22,30 +22,30 @@ public class ErodeDilate {
                 for (int jj = -half_w; jj <= half_w; jj++) {
                     for (int ii = -half_h; ii <= half_h; ii++) {
 
-                        if (kernel[ii + half_h][jj + half_w] == 1) {
-                            if (inImage[j - ii][i - jj] < pixel) {
-                                pixel = inImage[j - ii][i - jj];
+                        if (structure[ii + half_h][jj + half_w] == 1) {
+                            if (image[j - ii][i - jj] < pixel) {
+                                pixel = image[j - ii][i - jj];
                             }
                         }
                     }
                 }
-                outImage[j][i] = pixel;
+                output[j][i] = pixel;
             }
         }
 
-        return outImage;
+        return output;
     }
     /*-------------------------------------------------------------------------*/
 
-    public int[][] dilate(int[][] inImage, float kernel[][]) {
+    public int[][] dilate(int[][] image, float[][] structure) {
 
-        int half_h = kernel.length / 2;
-        int half_w = kernel[0].length / 2;
+        int half_h = structure.length / 2;
+        int half_w = structure[0].length / 2;
 
-        int height = inImage.length;
-        int width = inImage[0].length;
+        int height = image.length;
+        int width = image[0].length;
 
-        int[][] outImage = new int[height][width];
+        int[][] ouput = new int[height][width];
         int pixel = 0;
 
         for (int j = half_h; j < height - half_h; j++) {
@@ -55,18 +55,18 @@ public class ErodeDilate {
                 for (int jj = -half_w; jj <= half_w; jj++) {
                     for (int ii = -half_h; ii <= half_h; ii++) {
 
-                        if (kernel[ii + half_h][jj + half_w] == 1) {
-                            if (inImage[j - ii][i - jj] > pixel) {
-                                pixel = inImage[j - ii][i - jj];
+                        if (structure[ii + half_h][jj + half_w] == 1) {
+                            if (image[j - ii][i - jj] > pixel) {
+                                pixel = image[j - ii][i - jj];
                             }
                         }
                     }
                 }
-                outImage[j][i] = pixel;
+                ouput[j][i] = pixel;
             }
         }
 
-        return outImage;
+        return ouput;
     }
     /*-------------------------------------------------------------------------*/
 }
