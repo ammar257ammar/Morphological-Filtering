@@ -40,16 +40,16 @@ public class Main {
         HitAndMiss hit = new HitAndMiss();
 
         int[][] oimage = hit.convolve(image, bottomRight);
-        ImageWrite("src/output/bottomRight.png", oimage);
+        //ImageWrite("src/images/bottomRight.png", oimage);
         
-        oimage = hit.convolve(image, topLeft);
-        ImageWrite("src/output/topLeft.png", oimage);
+        hit.convolve(image, oimage, topLeft);
+        //ImageWrite("src/images/topLeft.png", oimage);
         
-        oimage = hit.convolve(image, topRight);
-        ImageWrite("src/output/topRight.png", oimage);
+        hit.convolve(image, oimage, topRight);
+        //ImageWrite("src/images/topRight.png", oimage);
         
-        oimage = hit.convolve(image, bottomLeft);
-        ImageWrite("src/output/bottomLeft.png", oimage);
+        hit.convolve(image, oimage, bottomLeft);
+        ImageWrite("src/images/Corners.png", oimage);
     }
     /*--------------------------------------------------------------------------------------------*/
 
