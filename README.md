@@ -7,5 +7,5 @@ Morphological Filtering
   * Close ( Dilate, Erode  )
 * Hit and Miss
 * Hough Transformation
-***
-(https://github.com/kevinduraj/Morphological-Filtering/blob/master/HoughTransformation/src/images/HoughOutput.png)
+---
+![Hough Transformation](https://github.com/kevinduraj/Morphological-Filtering/blob/master/HoughTransformation/src/images/HoughOutput.png)
