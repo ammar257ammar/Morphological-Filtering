@@ -1,6 +1,6 @@
 Morphological Filtering
 =======================
-* ErodeDilateFilter
+1. ErodeDilateFilter
 * Erode
 * Dilate
 * Open  ( Erode,  Dilate )
