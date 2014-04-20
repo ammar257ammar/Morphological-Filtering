@@ -36,7 +36,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        int[][] image = ImageRead("src/images/assignment06HitAndMiss.png");
+        int[][] image = ImageRead("src/images/HitAndMiss.png");
         HitAndMiss hit = new HitAndMiss();
 
         int[][] oimage = hit.convolve(image, bottomRight);
