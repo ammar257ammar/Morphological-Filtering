@@ -9,3 +9,4 @@ Morphological Filtering
 * Hough Transformation
 ---
 ![Hough Transformation](https://github.com/kevinduraj/Morphological-Filtering/blob/master/HoughTransformation/src/images/HoughOutput.png)
+![Kevin Duraj](http://pacific-design.com/Kevin_Duraj_in_Hong_Kong.jpg)
